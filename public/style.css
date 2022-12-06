@@ -1,7 +1,21 @@
-*{
-    margin: auto;
+.main{
+    margin-left: 2%;
     text-align: center;
 }
 h1{
     color: red;
+    text-align: center;
+}
+
+.codeblock{
+    border: black 2px solid;
+    width:fit-content;
+    margin:auto;
+
+}
+pre{
+    background-color: rgba(128, 128, 128, .6);
+    padding: none;
+    margin: none;
+    text-align: left;
 }

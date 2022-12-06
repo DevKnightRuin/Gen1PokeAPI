@@ -30,14 +30,27 @@ app.get('/api/weakness', (req, res) => {
 
 
 app.get('/api/:name', (req, res) => {
-    if(pokemon.pokemon[req.params.name.toLowerCase()]){
-        res.json(pokemon.pokemon[req.params.name.toLocaleLowerCase()])
+   try{
+
+       let pokename = convertString(req.params.name)
+       if(pokemon.pokemon[pokename]){
+           res.json(pokemon.pokemon[pokename])
+        }
+        else
+        res.json('invalid request - check spelling for errors')
     }
-    else
-        res.json('invalid request')
-})
+    })
 
 
 app.listen(PORT, function(){
     console.log('listening in')
 })
+
+
+
+function convertString(str){
+    //format string to prevent any errors with capitilization
+    let temp = str.toLocaleLowerCase().trim()
+    temp=temp[0].toUpperCase().concat(temp)
+    return temp;
+}
