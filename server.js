@@ -3,7 +3,7 @@ const express = require('express')
 const appDir = require('path')
 const cors = require('cors')
 const app = express();
-const PORT = 10000;
+const PORT = 8080;
 
 app.use(cors())
 app.use(express.static('public'))
@@ -62,7 +62,7 @@ app.get('/api/pokemon/image/:name', (req, res) =>{
      }
 })
 
-app.listen(PORT, function(){
+app.listen(process.env.PORT || PORT, function(){
     console.log('listening in')
 })
 
