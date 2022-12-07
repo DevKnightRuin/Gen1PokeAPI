@@ -21,10 +21,10 @@ const weaknessChart = {
         'weakness':['fire',  'fighting',  'rock']
     },
     'fighting':{
-        'weakness':['flying','psycic'],
+        'weakness':['flying','psychic'],
     },
     'poison':{
-        'weakness':['ground',  'psycic', 'bug']
+        'weakness':['ground',  'psychic', 'bug']
     },
     'ground':{
         'weakness':['water',  'grass',  'ice']
@@ -32,7 +32,7 @@ const weaknessChart = {
     'flying':{
         'weakness':['electric',  'ice',  'rock']
     },    
-    'psycic':{
+    'psychic':{
         'weakness':['bug'],
     },
     'bug':{
