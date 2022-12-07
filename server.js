@@ -47,12 +47,7 @@ app.get('/api/pokemon/image/:name', (req, res) =>{
     let pokename = convertString(req.params.name)
     console.log(pokename)
     if(pokemon.pokemon[pokename]){
-        
-        // file = 'D:\\WebDev Projects\\new API Project\\red-blue\\transparent\\8.png'   //this format works just need to setup for server
-        let tempStr = appDir + '\\new API Project\\'  + pokemon.pokemon[pokename].sprites.front
-        file = tempStr
-        //res.sendFile(pokemon.pokemon[pokename].spritesfront)
-        res.sendFile(file)
+        res.json(pokemon.pokemon[pokename].sprites.front)
      }
      else{
       res.json('invalid request - check spelling for errors')

@@ -9,12 +9,3 @@ function load(){
 
 
 
-const pokemon = {
-    'Bulbasaur': {
-            'type': ['grass', 'poison'],
-            'sprites':{
-                'front': 'red-blue\transparent\1.png',
-                'back': 'red-blue\transparent\back\1.png'
-            }
-        }
-    }
