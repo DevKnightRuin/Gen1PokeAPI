@@ -431,14 +431,14 @@ const pokemon = {
         'type': ['water', 'fighting'],
         'sprites':{
             'front': 'red-blue\transparent\62.png',
-            'back': 'red-blue\transparent\back\62.png'
+            'back': 'red-blue\transparent\\back\\62.png'
         },
     },
     'Abra': {
         'type': ['psychic'],
         'sprites':{
-            'front': 'red-blue\transparent\63.png',
-            'back': 'red-blue\transparent\back\63.png'
+            'front': 'red-blue\\transparent\\63.png',
+            'back': 'red-blue\\transparent\\back\\63.png'
         }
     },
     'Kadabra': {
