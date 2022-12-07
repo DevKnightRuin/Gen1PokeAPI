@@ -13,13 +13,21 @@ app.use(express.json())
 console.log('yippu')
 
 const pokemon = require('./data/pokemonlist.js')
-const weaknessChart = require('./data/typeweakness.js')
+const weaknessChart = require('./data/typeweakness.js');
+const { status } = require('express/lib/response.js');
 
 //create some data to send back
 
 app.get('/', (req, res) => {
     res.sendFile("index.html")
 })
+
+//allows render to verify the server status
+app.get('/checkme', (req, res) => {
+    const options = { status: 200, statusText: 'ok'}
+    res.sendStatus(200)
+})
+
 
 app.get('/api/pokemon', (req, res) => {
     res.json({pokemon})
